@@ -6,37 +6,38 @@
 </head>
 <body>
 <form style="font-size: 20px; text-align: start;">
-    <b>Amount</b>
-    <input id="amount" type="number" style="width: 120px;height: 30px;">
-    <b>From Currency</b>
-    <select id="from" style="width: 120px;height: 30px;">
-        <option value="1">USD</option>
-        <option value="23000">Việt Nam</option>
-        <option value="0.85">Euro</option>
-        <option value="111">Yen</option>
-        <option value="1118">Won</option>
-        <option value="7">Nhân Dân Tệ</option>
-        <option value="67.2">Rub Nga</option>
-    </select>
-    <b>To Currency</b>
-    <select id="to" style="width: 120px;height: 30px;">
-        <option value="1">USD</option>
-        <option value="23000">Việt Nam</option>
-        <option value="0.85">Euro</option>
-        <option value="111">Yen</option>
-        <option value="1118">Won</option>
-        <option value="7">Nhân Dân Tệ</option>
-        <option value="67.2">Rub Nga</option>
-    </select>
-    <input type="button"
+    &#160;&#160;<b>Amount</b>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b>From Currency</b>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;<b>To Currency</b>
+    <br>
+    &#160;<input id="amount" type="number" style="width: 100px;height: 23px;">
+    &#160;&#160;&#160;<select id="from" style="width: 160px;height: 30px;">
+    <option value="1">USD</option>
+    <option value="23000">Việt Nam</option>
+    <option value="0.85">Euro</option>
+    <option value="111">Yen</option>
+    <option value="1118">Won</option>
+    <option value="7">Nhân Dân Tệ</option>
+    <option value="67.2">Rub Nga</option>
+</select>
+    &#160;&#160;&#160;<select id="to" style="width: 120px;height: 30px;">
+    <option value="1">USD</option>
+    <option value="23000">Việt Nam</option>
+    <option value="0.85">Euro</option>
+    <option value="111">Yen</option>
+    <option value="1118">Won</option>
+    <option value="7">Nhân Dân Tệ</option>
+    <option value="67.2">Rub Nga</option>
+</select>
+    &#160;&#160;<input type="button"
            onclick="start()"
            value="Convert!"
            style="color: azure;font-size: 20px; background-color: darkorchid;width: 120px;height: 30px;">
     <br>
     <br>
     <div style="color: blue;font-size: 30px;">
-        Reslut:
-        <output id="output"></output>
+        &#160;Reslut:
+        <output id="output" style="width: 500px"></output>
     </div>
 </form>
 <script>
