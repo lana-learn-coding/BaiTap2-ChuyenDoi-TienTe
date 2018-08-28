@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi Tiền</title>
+</head>
+<body>
+<form style="font-size: 30px; text-align: center;">
+    <b>Amount</b>
+    <input id="amount" type="number">
+    <b>From Currency</b>
+    <select id="from">
+        <option value="1">USD</option>
+        <option value="23000">Việt Nam</option>
+        <option value="1.17">Euro</option>
+    </select>
+    <b>To Currency</b>
+    <select id="to">
+        <option value="1">USD</option>
+        <option value="23000">Việt Nam</option>
+        <option value="1.17">Euro</option>
+    </select>
+    <input type="button"
+           onclick="start()"
+           value="Convert!"
+           style="color: azure;font-size: 20px; background-color: darkorchid;">
+    <br>
+    <br>
+    <div style="color: blue;text-align: left">
+        Reslut:
+        <output id="output"></output>
+    </div>
+</form>
+<script src="core.js"></script>
+</body>
+</html>
