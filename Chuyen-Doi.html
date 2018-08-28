@@ -5,11 +5,11 @@
     <title>Đổi Tiền</title>
 </head>
 <body>
-<form style="font-size: 30px; text-align: center;">
+<form style="font-size: 20px; text-align: start;">
     <b>Amount</b>
-    <input id="amount" type="number">
+    <input id="amount" type="number" style="width: 120px;height: 30px;">
     <b>From Currency</b>
-    <select id="from">
+    <select id="from" style="width: 120px;height: 30px;">
         <option value="1">USD</option>
         <option value="23000">Việt Nam</option>
         <option value="0.85">Euro</option>
@@ -19,7 +19,7 @@
         <option value="67.2">Rub Nga</option>
     </select>
     <b>To Currency</b>
-    <select id="to">
+    <select id="to" style="width: 120px;height: 30px;">
         <option value="1">USD</option>
         <option value="23000">Việt Nam</option>
         <option value="0.85">Euro</option>
@@ -31,14 +31,18 @@
     <input type="button"
            onclick="start()"
            value="Convert!"
-           style="color: azure;font-size: 20px; background-color: darkorchid;">
+           style="color: azure;font-size: 20px; background-color: darkorchid;width: 120px;height: 30px;">
     <br>
     <br>
-    <div style="color: blue;text-align: left">
+    <div style="color: blue;font-size: 30px;">
         Reslut:
         <output id="output"></output>
     </div>
 </form>
+<script>
+    alert("made by Toàn Nguyễn");
+    console.log("credit showed");
+</script>
 <script src="core.js"></script>
 </body>
 </html>
