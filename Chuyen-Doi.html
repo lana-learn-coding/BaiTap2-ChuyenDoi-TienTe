@@ -6,37 +6,49 @@
 </head>
 <body>
 <form style="font-size: 20px; text-align: start;">
-    &#160;&#160;<b>Amount</b>
-    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b>From Currency</b>
-    &#160;&#160;&#160;&#160;&#160;&#160;&#160;<b>To Currency</b>
-    <br>
-    &#160;<input id="amount" type="number" style="width: 100px;height: 23px;">
-    &#160;&#160;&#160;<select id="from" style="width: 160px;height: 30px;">
-    <option value="1">USD</option>
-    <option value="23000">Việt Nam</option>
-    <option value="0.85">Euro</option>
-    <option value="111">Yen</option>
-    <option value="1118">Won</option>
-    <option value="7">Nhân Dân Tệ</option>
-    <option value="67.2">Rub Nga</option>
-</select>
-    &#160;&#160;&#160;<select id="to" style="width: 120px;height: 30px;">
-    <option value="1">USD</option>
-    <option value="23000">Việt Nam</option>
-    <option value="0.85">Euro</option>
-    <option value="111">Yen</option>
-    <option value="1118">Won</option>
-    <option value="7">Nhân Dân Tệ</option>
-    <option value="67.2">Rub Nga</option>
-</select>
-    &#160;&#160;<input type="button"
-           onclick="start()"
-           value="Convert!"
-           style="color: azure;font-size: 20px; background-color: darkorchid;width: 120px;height: 30px;">
+    <table style="width: 100%;">
+        <tr>
+            <td><b>Amount</b></td>
+            <td><b>From Currency</b></td>
+            <td><b>To Currency</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input id="amount" type="number" style="width: 100px;height: 23px;"></td>
+        <td>
+            <select id="from" style="width: 160px;height: 30px;">
+            <option value="1">USD</option>
+            <option value="23000">Việt Nam</option>
+            <option value="0.85">Euro</option>
+            <option value="111">Yen</option>
+            <option value="1118">Won</option>
+            <option value="7">Nhân Dân Tệ</option>
+            <option value="67.2">Rub Nga</option>
+        </select>
+        </td>
+        <td>
+            <select id="to" style="width: 120px;height: 30px;">
+            <option value="1">USD</option>
+            <option value="23000">Việt Nam</option>
+            <option value="0.85">Euro</option>
+            <option value="111">Yen</option>
+            <option value="1118">Won</option>
+            <option value="7">Nhân Dân Tệ</option>
+            <option value="67.2">Rub Nga</option>
+        </select>
+        </td>
+            <td>
+                <input type="button"
+                   onclick="start()"
+                   value="Convert!"
+                   style="color: azure;font-size: 20px; background-color: darkorchid;width: 120px;height: 30px;">
+            </td>
+        </tr>
+    </table>
     <br>
     <br>
     <div style="color: blue;font-size: 30px;">
-        &#160;Reslut:
+        Reslut:
         <output id="output" style="width: 500px"></output>
     </div>
 </form>
@@ -44,6 +56,21 @@
     alert("made by Toàn Nguyễn");
     console.log("credit showed");
 </script>
-<script src="core.js"></script>
+<script>
+    function start() {
+        let fromcurrency = document.getElementById("from")[document.getElementById("from").selectedIndex].value;//get value from select
+        fromcurrency = parseFloat(fromcurrency);//chuyen sang dang float de tinh toan
+        let tocurrency = document.getElementById("to")[document.getElementById("to").selectedIndex].value;//get value from select
+        tocurrency = parseFloat(tocurrency);//chuyen sang float de tinh toan
+
+        // lay amount tu input
+        let amount = document.getElementById("amount").value;
+        amount = parseFloat(amount);
+
+        //tinh toan dau ra
+        let dapan = (amount * tocurrency) / fromcurrency;
+        document.getElementById("output").innerHTML = dapan;
+    }
+</script>
 </body>
 </html>
